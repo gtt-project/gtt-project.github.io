@@ -13,7 +13,7 @@ Location-based Task Management.
 - [`redmine_gtt_smash`](https://github.com/gtt-project/redmine_gtt_smash)
 - [`redmine_open311`](https://github.com/gtt-project/redmine_open311)
 
-### Other plugins
+#### Other plugins
 
 - [`redmine_text_blocks`](https://github.com/gtt-project/redmine_text_blocks)
 - `redmine_decision_tree`
