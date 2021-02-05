@@ -22,6 +22,10 @@ Location-based Task Management.
 - [`redmine_admissions`](https://github.com/gtt-project/redmine_admissions)
 - `redmine_expo_push`
 
+#### Other repositories
+
+- [`docker-gtt`](https://github.com/gtt-project/docker-gtt)
+
 [TBD]
 
 ### Getting started
@@ -30,7 +34,7 @@ Location-based Task Management.
 
 ### Users
 
-- [My City Report](https://www.mycityreport.jp/)
+- [MyCityReport](https://www.mycityreport.jp/)
 - [Hyakumori](https://www.hyakumori.com/)
 
 ### License
