@@ -6,9 +6,9 @@ Location-based Task Management.
 
 #### GTT plugins
 
-- `redmine_gtt`
+- [`redmine_gtt`](https://github.com/gtt-project/redmine_gtt)
 - `redmine_gtt_export`
-- `redmine_gtt_print`
+- [`redmine_gtt_print`](https://github.com/gtt-project/redmine_gtt_print)
 - `redmine_gtt_fax`
 - [`redmine_gtt_smash`](https://github.com/gtt-project/redmine_gtt_smash)
 - [`redmine_open311`](https://github.com/gtt-project/redmine_open311)
@@ -43,4 +43,4 @@ These programs are free software. See the `LICENSE` in each repository for more 
 
 ### Partners
 
-[TBD]
+- [Georepublic](https://georepublc.info)
