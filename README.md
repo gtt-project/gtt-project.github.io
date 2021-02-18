@@ -30,7 +30,16 @@ Location-based Task Management.
 
 ### Getting started
 
-[TBD]
+The easist way to try out the GTT Redmine plugins is by using [`docker-gtt`](https://github.com/gtt-project/docker-gtt).
+After cloning the GTT Docker repository run:
+
+```
+git submodule update --init
+docker-compose up --build
+```
+
+Open the application on http://localhost:3000/ with default user is `admin/admin`.
+Find then more information in [how to setup the GTT plugin](https://github.com/gtt-project/redmine_gtt#how-to-use).
 
 ### Users
 
