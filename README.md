@@ -7,7 +7,7 @@ Location-based Task Management.
 #### GTT plugins
 
 - [`redmine_gtt`](https://github.com/gtt-project/redmine_gtt)
-- `redmine_gtt_export` (coming soon)
+- [`redmine_gtt_export`](https://github.com/gtt-project/redmine_gtt_export)
 - [`redmine_gtt_print`](https://github.com/gtt-project/redmine_gtt_print) (coming soon)
 - `redmine_gtt_fax` (coming soon)
 - [`redmine_gtt_smash`](https://github.com/gtt-project/redmine_gtt_smash) (coming soon)
