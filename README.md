@@ -26,8 +26,6 @@ Location-based Task Management.
 
 - [`docker-gtt`](https://github.com/gtt-project/docker-gtt)
 
-[TBD]
-
 ### Getting started
 
 The easist way to try out the GTT Redmine plugins is by using [`docker-gtt`](https://github.com/gtt-project/docker-gtt).
