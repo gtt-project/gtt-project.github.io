@@ -11,7 +11,7 @@ Location-based Task Management.
 - [`redmine_gtt_print`](https://github.com/gtt-project/redmine_gtt_print) (coming soon)
 - `redmine_gtt_fax` (coming soon)
 - [`redmine_gtt_smash`](https://github.com/gtt-project/redmine_gtt_smash) (coming soon)
-- [`redmine_open311`](https://github.com/gtt-project/redmine_open311) (coming soon)
+- [`redmine_open311`](https://github.com/gtt-project/redmine_open311)
 
 #### Other plugins
 
