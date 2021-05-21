@@ -11,7 +11,6 @@ Location-based Task Management.
 - [`redmine_gtt_print`](https://github.com/gtt-project/redmine_gtt_print)
 - [`redmine_gtt_smash`](https://github.com/gtt-project/redmine_gtt_smash)
 - [`redmine_open311`](https://github.com/gtt-project/redmine_open311)
-- `redmine_gtt_fax` (coming soon)
 
 #### Other plugins
 
@@ -33,6 +32,7 @@ After cloning the GTT Docker repository run:
 
 ```
 git submodule update --init
+cp .env.example .env
 docker-compose up --build
 ```
 
