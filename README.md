@@ -19,7 +19,7 @@ Location-based Task Management.
 - [`redmine_admissions`](https://github.com/gtt-project/redmine_admissions)
 - [`redmine_decision_tree`](https://github.com/gtt-project/redmine_decision_tree)
 - [`redmine_expo_push`](https://github.com/gtt-project/redmine_expo_push)
-- [`redmine_supply`](https://github.com/gtt-project/redmine_supply) (coming soon)
+- [`redmine_supply`](https://github.com/gtt-project/redmine_supply)
 
 #### Other repositories
 
