@@ -16,10 +16,10 @@ Location-based Task Management.
 
 - [`redmine_text_blocks`](https://github.com/gtt-project/redmine_text_blocks)
 - [`redmine_privacy`](https://github.com/gtt-project/redmine_privacy)
+- [`redmine_admissions`](https://github.com/gtt-project/redmine_admissions)
+- [`redmine_decision_tree`](https://github.com/gtt-project/redmine_decision_tree)
+- [`redmine_expo_push`](https://github.com/gtt-project/redmine_expo_push)
 - [`redmine_supply`](https://github.com/gtt-project/redmine_supply) (coming soon)
-- [`redmine_admissions`](https://github.com/gtt-project/redmine_admissions) (coming soon)
-- `redmine_decision_tree` (coming soon)
-- `redmine_expo_push` (coming soon)
 
 #### Other repositories
 
