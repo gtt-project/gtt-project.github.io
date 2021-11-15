@@ -15,6 +15,7 @@ Location-based Task Management.
 #### Other plugins
 
 - [`redmine_text_blocks`](https://github.com/gtt-project/redmine_text_blocks)
+- [`redmine_custom_fields_groups`](https://github.com/gtt-project/redmine_custom_fields_groups)
 - [`redmine_privacy`](https://github.com/gtt-project/redmine_privacy)
 - [`redmine_admissions`](https://github.com/gtt-project/redmine_admissions)
 - [`redmine_decision_tree`](https://github.com/gtt-project/redmine_decision_tree)
