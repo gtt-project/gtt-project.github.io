@@ -44,6 +44,7 @@ Read then more about [how to configure the GTT plugin](https://github.com/gtt-pr
 
 - [MyCityReport](https://www.mycityreport.jp/)
 - [Hyakumori](https://www.hyakumori.com/)
+- [Lobsta](https://www.lobsta.org/)
 
 ### License
 
