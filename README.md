@@ -40,11 +40,16 @@ docker-compose up --build
 Open the application on [http://localhost:3000/](http://localhost:3000/) with default user `admin/admin`.
 Read then more about [how to configure the GTT plugin](https://github.com/gtt-project/redmine_gtt#how-to-use).
 
+### Join the community
+
+Visit [Discussions](https://github.com/orgs/gtt-project/discussions) as a place to connect with other members of our community, to ask questions and to share ideas.
+
 ### Users
 
 - [MyCityReport](https://www.mycityreport.jp/)
 - [Hyakumori](https://www.hyakumori.com/)
 - [Lobsta](https://www.lobsta.org/)
+- [Georepublic](https://georepublc.info)
 
 ### License
 
