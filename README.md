@@ -7,10 +7,15 @@ Location-based Task Management.
 #### GTT plugins
 
 - [`redmine_gtt`](https://github.com/gtt-project/redmine_gtt)
+- [`redmine_approve_issues`](https://github.com/gtt-project/redmine_approve_issues)(*)
+- [`redmine_gtt_assistant`](https://github.com/gtt-project/redmine_gtt_assistant)(*)
 - [`redmine_gtt_export`](https://github.com/gtt-project/redmine_gtt_export)
+- [`redmine_gtt_fiware`](https://github.com/gtt-project/redmine_gtt_fiware)(*)
 - [`redmine_gtt_print`](https://github.com/gtt-project/redmine_gtt_print)
 - [`redmine_gtt_smash`](https://github.com/gtt-project/redmine_gtt_smash)
 - [`redmine_open311`](https://github.com/gtt-project/redmine_open311)
+
+(*) experimental
 
 #### Other plugins
 
@@ -21,6 +26,7 @@ Location-based Task Management.
 - [`redmine_decision_tree`](https://github.com/gtt-project/redmine_decision_tree)
 - [`redmine_expo_push`](https://github.com/gtt-project/redmine_expo_push)
 - [`redmine_supply`](https://github.com/gtt-project/redmine_supply)
+- [`redmine_chatwoot`](https://github.com/gtt-project/redmine_chatwoot)
 
 #### Other repositories
 
