@@ -26,7 +26,8 @@ Location-based Task Management.
 - [`redmine_decision_tree`](https://github.com/gtt-project/redmine_decision_tree)
 - [`redmine_expo_push`](https://github.com/gtt-project/redmine_expo_push)
 - [`redmine_supply`](https://github.com/gtt-project/redmine_supply)
-- [`redmine_chatwoot`](https://github.com/gtt-project/redmine_chatwoot)
+- [`redmine_chatwoot`](https://github.com/gtt-project/redmine_chatwoot)(*)
+- [`redmine_print_templates`](https://github.com/gtt-project/redmine_print_templates)(*)
 
 #### Other repositories
 
