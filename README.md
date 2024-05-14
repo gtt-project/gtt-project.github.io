@@ -1,6 +1,6 @@
 ## GTT Project
 
-Location-based Task Management.
+Task Management that connects Places and Tasks.
 
 ### Repositories
 
