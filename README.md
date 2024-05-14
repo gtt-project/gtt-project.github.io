@@ -55,6 +55,7 @@ Visit [Discussions](https://github.com/orgs/gtt-project/discussions) as a place 
 
 - [MyCityReport](https://www.mycityreport.jp/)
 - [Hyakumori](https://www.hyakumori.com/)
+- [TPTC](https://www.tptc.co.jp/)
 - [Lobsta](https://www.lobsta.org/)
 - [Georepublic](https://georepublc.info)
 
