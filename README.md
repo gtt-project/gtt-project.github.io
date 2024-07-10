@@ -26,6 +26,7 @@ Task Management that connects Places and Tasks.
 - [`redmine_decision_tree`](https://github.com/gtt-project/redmine_decision_tree)
 - [`redmine_expo_push`](https://github.com/gtt-project/redmine_expo_push)
 - [`redmine_supply`](https://github.com/gtt-project/redmine_supply)
+- [`redmine_good_job`](https://github.com/gtt-project/redmine_good_job)
 - [`redmine_chatwoot`](https://github.com/gtt-project/redmine_chatwoot)(*)
 - [`redmine_print_templates`](https://github.com/gtt-project/redmine_print_templates)(*)
 
