@@ -58,12 +58,9 @@ Visit [Discussions](https://github.com/orgs/gtt-project/discussions) as a place 
 - [Hyakumori](https://www.hyakumori.com/)
 - [TPTC](https://www.tptc.co.jp/)
 - [Lobsta](https://www.lobsta.org/)
-- [Georepublic](https://georepublc.info)
+- and more ...
 
 ### License
 
 These programs are free software. See the `LICENSE` in each repository for more information.
 
-### Partners
-
-- [Georepublic](https://georepublc.info)
