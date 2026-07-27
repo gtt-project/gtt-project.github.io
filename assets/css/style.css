@@ -12,11 +12,32 @@
   --card-bg: #ffffff;
   --code-bg: #10241a;
   --code-text: #d8ecd9;
+  --on-accent: #ffffff;
   --shadow: 0 10px 30px rgba(23, 46, 30, 0.12);
+  color-scheme: light;
+}
+
+/* Dark scheme: applied when toggled explicitly, or by system preference
+   unless the user toggled light. Keep both blocks in sync. */
+:root[data-theme="dark"] {
+  --bg: #101613;
+  --bg-alt: #161f19;
+  --text: #e6ede7;
+  --text-muted: #9fb0a4;
+  --accent: #6fbf67;
+  --accent-strong: #8fd287;
+  --accent-soft: #1d2f22;
+  --border: #2a3830;
+  --card-bg: #182219;
+  --code-bg: #0b1410;
+  --code-text: #cfe4d0;
+  --on-accent: #0c130e;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #101613;
     --bg-alt: #161f19;
     --text: #e6ede7;
@@ -28,7 +49,9 @@
     --card-bg: #182219;
     --code-bg: #0b1410;
     --code-text: #cfe4d0;
+    --on-accent: #0c130e;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
   }
 }
 
@@ -121,15 +144,10 @@ h3 { font-size: 1.15rem; }
 
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
 }
 
-.btn-primary:hover { background: var(--accent-strong); color: #fff; }
-
-@media (prefers-color-scheme: dark) {
-  .btn-primary { color: #0c130e; }
-  .btn-primary:hover { color: #0c130e; }
-}
+.btn-primary:hover { background: var(--accent-strong); color: var(--on-accent); }
 
 .btn-ghost {
   border-color: var(--border);
@@ -139,6 +157,34 @@ h3 { font-size: 1.15rem; }
 .btn-ghost:hover { border-color: var(--accent); color: var(--text); }
 
 .btn-github { margin-left: 4px; }
+
+/* Theme toggle: show the icon for the scheme you would switch to */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.theme-toggle:hover { border-color: var(--accent); color: var(--text); }
+
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+}
 
 /* Hero */
 
@@ -343,12 +389,8 @@ a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
   margin-right: 10px;
   border-radius: 50%;
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   font-size: 0.85rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .steps h3::before { color: #0c130e; }
 }
 
 pre {
