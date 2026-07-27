@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTT Project - Location-based task management for Redmine</title>
+  <meta name="description" content="The GTT (Geo-Task-Tracker) plugins turn Redmine into a location-based task manager. Maps, geometry and spatial search for your issues, built on PostGIS and OpenLayers.">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="canonical" href="https://gtt-project.org/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GTT Project - Location-based task management for Redmine">
+  <meta property="og:description" content="Open source plugins that add maps, geometry and spatial search to Redmine. Built on PostGIS and OpenLayers.">
+  <meta property="og:url" content="https://gtt-project.org/">
+  <meta property="og:image" content="https://gtt-project.org/assets/img/issues-map.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer data-domain="gtt-project.org" src="https://plausible.karida.info/js/plausible.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="container nav">
+    <a class="brand" href="#top">
+      <img src="assets/img/logo.png" alt="GTT Project logo" width="36" height="36">
+      <span>GTT Project</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#ecosystem">Plugins</a>
+      <a href="#get-started">Get started</a>
+      <a href="https://github.com/orgs/gtt-project/discussions">Community</a>
+    </div>
+    <a class="btn btn-ghost btn-github" href="https://github.com/gtt-project">
+      <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub
+    </a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Open source Redmine plugins</p>
+      <h1>Turn Redmine into a<br>location-based task manager</h1>
+      <p class="lead">
+        The Geo-Task-Tracker (GTT) plugin adds maps, geometry and spatial search
+        to Redmine. Locate issues as points, lines or polygons, see them on a
+        map, and filter them by where they are.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#get-started">Get started</a>
+        <a class="btn btn-ghost" href="https://github.com/gtt-project/redmine_gtt">View on GitHub</a>
+      </div>
+      <ul class="badges" aria-label="Compatibility">
+        <li>Redmine 6.0 - 7.0</li>
+        <li>PostgreSQL / PostGIS</li>
+        <li>OpenLayers</li>
+        <li>REST API</li>
+        <li>GPLv3</li>
+      </ul>
+      <figure class="browser-frame hero-shot">
+        <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+        <img src="assets/img/issues-map.jpg" width="2000" height="1222"
+             alt="Redmine issue list with an interactive map showing park maintenance issues as points, a line and a polygon">
+      </figure>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2>What GTT adds to Redmine</h2>
+      <p class="section-lead">Everything stays plain Redmine: trackers, workflows, permissions and notifications work exactly as before. GTT adds the "where".</p>
+      <div class="grid features">
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.3-6.5-10a6.5 6.5 0 0 1 13 0c0 4.7-6.5 10-6.5 10z"/><circle cx="12" cy="11" r="2.4"/></svg></div>
+          <h3>Geometry on issues</h3>
+          <p>Attach points, lines or polygons to issues, projects and users. Draw directly on the map or import existing geometry.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 3.6 5.4v15L9 18l6 2.4 5.4-2.4v-15L15 5.4 9 3z"/><path d="M9 3v15M15 5.4v15"/></svg></div>
+          <h3>Maps everywhere</h3>
+          <p>Issue lists, issue details, project overviews and user profiles all get interactive OpenLayers maps that reflect your filters.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7.5" stroke-dasharray="3 3"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/></svg></div>
+          <h3>Spatial filters and sorting</h3>
+          <p>Filter issues by map extent or by distance from a location, sort by distance, and show a distance column in the unit you prefer.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a5.5 5.5 0 0 0-5.5 5.5c0 4 5.5 6.5-1 9.5h13c-6.5-3-1-5.5-1-9.5A5.5 5.5 0 0 0 12 3z"/><path d="M10 21h4"/></svg></div>
+          <h3>Auto-watch nearby issues</h3>
+          <p>Users with a stored location can automatically watch new issues within a chosen distance and get standard Redmine notifications. New in 7.1.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="4" rx="1"/><rect x="3" y="11" width="18" height="4" rx="1" opacity="0.7"/><rect x="3" y="17" width="18" height="4" rx="1" opacity="0.4"/></svg></div>
+          <h3>Flexible base layers</h3>
+          <p>Administrators manage map layers for OSM, XYZ, WMS, WMTS and vector tile sources, and projects pick the layers they need.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></div>
+          <h3>GeoJSON REST API</h3>
+          <p>The Redmine REST API is extended with GeoJSON geometry and spatial filters, ready for integrations and field data apps.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="screenshots" class="section alt">
+    <div class="container">
+      <h2>A closer look</h2>
+      <div class="showcase">
+        <div class="showcase-row">
+          <div class="showcase-text">
+            <h3>Every issue has a place</h3>
+            <p>Issue pages show the geometry in context, next to the familiar
+            Redmine attributes, watchers and history. Points, lines and
+            polygons are all first-class citizens.</p>
+          </div>
+          <figure class="browser-frame">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img src="assets/img/issue-detail.jpg" width="1600" height="966" loading="lazy"
+                 alt="Redmine issue page showing a polygon on a map above the issue attributes">
+          </figure>
+        </div>
+        <div class="showcase-row reverse">
+          <div class="showcase-text">
+            <h3>Capture location as you create</h3>
+            <p>The new issue form opens with a map and drawing tools. Click to
+            set a point, draw a line or sketch an area, then fill in the rest
+            like any other Redmine issue.</p>
+          </div>
+          <figure class="browser-frame">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img src="assets/img/new-issue.jpg" width="1600" height="744" loading="lazy"
+                 alt="Redmine new issue form with a map and geometry drawing tools">
+          </figure>
+        </div>
+        <div class="showcase-row">
+          <div class="showcase-text">
+            <h3>Personal maps and nearby notifications</h3>
+            <p>Users can store their own location and opt in to automatically
+            watch new issues within a chosen distance. Notifications arrive
+            through the normal Redmine channels.</p>
+          </div>
+          <figure class="browser-frame narrow">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img src="assets/img/my-account.jpg" width="1000" height="1551" loading="lazy"
+                 alt="Redmine My account page with a user map and the auto-watch nearby issues preference">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosystem" class="section">
+    <div class="container">
+      <h2>The plugin family</h2>
+      <p class="section-lead">GTT is modular: start with the core plugin and add what your workflow needs.</p>
+      <div class="grid repos">
+        <a class="card repo" href="https://github.com/gtt-project/redmine_gtt">
+          <h3>redmine_gtt <span class="tag">core</span></h3>
+          <p>The Geo-Task-Tracker plugin: maps, geometry, spatial filters and the extended REST API.</p>
+        </a>
+        <a class="card repo" href="https://github.com/gtt-project/redmine_gtt_print">
+          <h3>redmine_gtt_print</h3>
+          <p>Print issues with maps as PDF, using Mapfish Print templates.</p>
+        </a>
+        <a class="card repo" href="https://github.com/gtt-project/redmine_gtt_fiware">
+          <h3>redmine_gtt_fiware</h3>
+          <p>Connect Redmine to FIWARE: use GTT as an NGSI context provider and consumer.</p>
+        </a>
+        <a class="card repo" href="https://github.com/gtt-project/redmine_gtt_smash">
+          <h3>redmine_gtt_smash</h3>
+          <p>Use the SMASH digital field mapping app for mobile data collection with GTT.</p>
+        </a>
+        <a class="card repo" href="https://github.com/gtt-project/redmine_gtt_meshtastic">
+          <h3>redmine_gtt_meshtastic</h3>
+          <p>Generate Meshtastic channel configuration to bring off-grid devices into your workflow.</p>
+        </a>
+        <a class="card repo" href="https://github.com/gtt-project/qgis_lobsta">
+          <h3>qgis_lobsta</h3>
+          <p>Work with GTT issues directly in QGIS through the extended REST API.</p>
+        </a>
+      </div>
+      <p class="center"><a class="btn btn-ghost" href="https://github.com/orgs/gtt-project/repositories">All repositories</a></p>
+    </div>
+  </section>
+
+  <section id="get-started" class="section alt">
+    <div class="container">
+      <h2>Get started</h2>
+      <p class="section-lead">GTT requires Redmine with PostgreSQL/PostGIS. Each release ships a prebuilt archive, so no Node toolchain is needed on the server.</p>
+      <ol class="steps">
+        <li>
+          <h3>Prepare a PostGIS database</h3>
+          <pre><code>createdb -U postgres -O redmine redmine
+psql -U postgres -d redmine -c "CREATE EXTENSION postgis;"</code></pre>
+        </li>
+        <li>
+          <h3>Install the plugin</h3>
+          <pre><code>cd /path/to/redmine/plugins
+curl -LO https://github.com/gtt-project/redmine_gtt/releases/download/v7.1.0/redmine_gtt-v7.1.0.tar.gz
+tar -xzf redmine_gtt-v7.1.0.tar.gz</code></pre>
+        </li>
+        <li>
+          <h3>Migrate and restart</h3>
+          <pre><code>bundle install
+bundle exec rake redmine:plugins:migrate RAILS_ENV=production</code></pre>
+        </li>
+      </ol>
+      <p class="center">
+        <a class="btn btn-primary" href="https://github.com/gtt-project/redmine_gtt/blob/main/doc/getting-started.md">Read the getting started guide</a>
+        <a class="btn btn-ghost" href="https://github.com/gtt-project/redmine_gtt/releases">Releases</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="news" class="section">
+    <div class="container">
+      <h2>News</h2>
+      <div class="grid news">
+        <article class="card">
+          <p class="date">July 2026</p>
+          <h3><a href="https://github.com/gtt-project/redmine_gtt/releases/tag/v7.1.0">redmine_gtt 7.1.0</a></h3>
+          <p>Auto-watch nearby issues, configurable distance units, a Map settings admin entry and documented spatial REST API filters.</p>
+        </article>
+        <article class="card">
+          <p class="date">July 2026</p>
+          <h3><a href="https://github.com/gtt-project/redmine_gtt/releases/tag/v7.0.0">redmine_gtt 7.0.0</a></h3>
+          <p>Redmine 7.0 support, automatic geo gem resolution per Rails version, and a refreshed frontend toolchain.</p>
+        </article>
+        <article class="card">
+          <p class="date">Community</p>
+          <h3><a href="https://github.com/orgs/gtt-project/discussions">Join the discussions</a></h3>
+          <p>Ask questions, share how you use GTT and help shape what comes next in the GitHub Discussions of the project.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="#top">
+        <img src="assets/img/logo.png" alt="" width="28" height="28">
+        <span>GTT Project</span>
+      </a>
+      <p>Free and open source software, licensed under the GPLv3 unless noted otherwise in the repository.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/gtt-project">GitHub organization</a>
+      <a href="https://github.com/orgs/gtt-project/discussions">Discussions</a>
+      <a href="https://github.com/gtt-project/.github/blob/main/SUPPORT.md">Support</a>
+      <a href="https://github.com/gtt-project/.github/blob/main/SECURITY.md">Security</a>
+      <a href="https://github.com/gtt-project/.github/blob/main/CONTRIBUTING.md">Contributing</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
