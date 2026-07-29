@@ -2,7 +2,24 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "gttfiware": "https://gtt-project.org/ns/fiware#"
+    "gttfiware": "https://gtt-project.org/ns/fiware#",
+    "Issue": "gttfiware:Issue",
+    "title": "gttfiware:title",
+    "status": "gttfiware:status",
+    "statusLabel": "gttfiware:statusLabel",
+    "subtype": "gttfiware:subtype",
+    "source": "gttfiware:source",
+    "refersTo": { "@id": "gttfiware:refersTo", "@type": "@id" },
+    "description": "gttfiware:description",
+    "priority": "gttfiware:priority",
+    "category": "gttfiware:category",
+    "targetVersion": "gttfiware:targetVersion",
+    "startDate": "gttfiware:startDate",
+    "dueDate": "gttfiware:dueDate",
+    "estimatedTime": "gttfiware:estimatedTime",
+    "percentDone": "gttfiware:percentDone",
+    "parent": { "@id": "gttfiware:parent", "@type": "@id" },
+    "assignee": "gttfiware:assignee"
   },
   "@graph": [
     {
