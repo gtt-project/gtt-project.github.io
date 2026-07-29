@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTT FIWARE core vocabulary</title>
+  <meta name="description" content="The frozen core vocabulary emitted by the redmine_gtt_fiware plugin: Issue entities as shared NGSI-LD context.">
+  <link rel="alternate" type="application/ld+json" href="/ns/fiware.jsonld">
+  <link rel="icon" href="/assets/img/logo.png">
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0; color: #1e2a22; background: #fbfcfb; }
+    @media (prefers-color-scheme: dark) { body { color: #dfe7e2; background: #131a16; } a { color: #7fc796; } }
+    main { max-width: 860px; margin: 0 auto; padding: 32px 20px 64px; }
+    header a { text-decoration: none; font-weight: 600; color: inherit; }
+    h1 { font-size: 1.7rem; margin: 24px 0 8px; }
+    h2 { font-size: 1.2rem; margin-top: 40px; }
+    code { font-size: 0.92em; }
+    table { border-collapse: collapse; width: 100%; margin-top: 12px; }
+    th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid rgba(128,128,128,0.35); }
+    th { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.75; }
+    td:first-child { white-space: nowrap; font-family: ui-monospace, monospace; font-size: 0.92em; }
+    .muted { opacity: 0.75; font-size: 0.95em; }
+  </style>
+</head>
+<body>
+<main>
+  <header><a href="/">← GTT Project</a></header>
+
+  <h1>GTT FIWARE core vocabulary</h1>
+  <p class="muted">Namespace: <code>https://gtt-project.org/ns/fiware#</code> ·
+  Machine-readable: <a href="/ns/fiware.jsonld">fiware.jsonld</a> ·
+  Emitted by <a href="https://github.com/gtt-project/redmine_gtt_fiware">redmine_gtt_fiware</a></p>
+
+  <p>The <a href="https://github.com/gtt-project/redmine_gtt_fiware">redmine_gtt_fiware</a>
+  plugin publishes Redmine issues into NGSI-LD context brokers as
+  <code>Issue</code> entities, so any system on the broker can see whether a
+  problem is being handled, in what state, and where. This page defines the
+  <strong>frozen core</strong>: the terms every emitting instance uses with
+  the same meaning. It is deliberately small; anything here changing would
+  break consumers, so nothing here changes.</p>
+
+  <p>Each instance <em>extends</em> this core with its own vocabulary,
+  published as a JSON-LD context at
+  <code>&lt;instance&gt;/fiware/context.jsonld</code>: subtypes (declared
+  <code>rdfs:subClassOf</code> the core <code>Issue</code>) and custom-field
+  terms. Dereference an instance's context to learn its full schema.</p>
+
+  <h2 id="Issue">Class</h2>
+  <table>
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td>Issue</td><td>A tracked unit of work in a Redmine instance,
+      published as shared context. Entity ids are
+      <code>urn:ngsi-ld:Issue:redmine:&lt;instance&gt;:&lt;issue&gt;</code>
+      and stay stable for the life of the issue.</td></tr>
+  </table>
+
+  <h2>Core properties <span class="muted">(always present)</span></h2>
+  <table>
+    <tr><th>Term</th><th>Kind</th><th>Meaning</th></tr>
+    <tr id="title"><td>title</td><td>Property</td><td>The issue subject.</td></tr>
+    <tr id="status"><td>status</td><td>Property</td><td>Normalized lifecycle state:
+      <code>open</code> or <code>closed</code>.</td></tr>
+    <tr id="statusLabel"><td>statusLabel</td><td>Property</td><td>The instance's own status name, unnormalized.</td></tr>
+    <tr id="subtype"><td>subtype</td><td>Property</td><td>The instance-defined subtype term for the
+      issue's tracker (for example <code>WorkOrder</code>). Declared as a class in the
+      instance's context; travels as a property because common brokers reject
+      multi-type entities.</td></tr>
+    <tr id="source"><td>source</td><td>Property</td><td>The canonical URL of the issue in its system of record.</td></tr>
+    <tr id="refersTo"><td>refersTo</td><td>Relationship</td><td>The entity that triggered the issue, when it
+      originated from a broker notification. Correlates a problem with the work addressing it.</td></tr>
+  </table>
+  <p class="muted">Entities also carry the NGSI-LD core-context terms
+  <code>location</code> (the issue geometry as GeoJSON), <code>dateCreated</code>
+  and <code>dateModified</code>.</p>
+
+  <h2>Standard properties <span class="muted">(exposed per tracker by the instance administrator)</span></h2>
+  <table>
+    <tr><th>Term</th><th>Kind</th><th>Meaning</th></tr>
+    <tr id="description"><td>description</td><td>Property</td><td>The issue description.</td></tr>
+    <tr id="priority"><td>priority</td><td>Property</td><td>The priority name.</td></tr>
+    <tr id="category"><td>category</td><td>Property</td><td>The issue category name.</td></tr>
+    <tr id="targetVersion"><td>targetVersion</td><td>Property</td><td>The target version or milestone name.</td></tr>
+    <tr id="startDate"><td>startDate</td><td>Property</td><td>The planned start date.</td></tr>
+    <tr id="dueDate"><td>dueDate</td><td>Property</td><td>The due date.</td></tr>
+    <tr id="estimatedTime"><td>estimatedTime</td><td>Property</td><td>Estimated effort in hours.</td></tr>
+    <tr id="percentDone"><td>percentDone</td><td>Property</td><td>Completion in percent, 0 to 100.</td></tr>
+    <tr id="parent"><td>parent</td><td>Relationship</td><td>The parent issue's entity.</td></tr>
+    <tr id="assignee"><td>assignee</td><td>Property</td><td>The assignee's display name. Publishing it
+      to a shared broker is an explicit administrator decision.</td></tr>
+  </table>
+
+  <p class="muted">Everything beyond the core defaults to unexposed. Journals,
+  watchers and private issues are never emitted.</p>
+</main>
+</body>
+</html>

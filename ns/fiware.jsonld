@@ -1,0 +1,134 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "gttfiware": "https://gtt-project.org/ns/fiware#"
+  },
+  "@graph": [
+    {
+      "@id": "https://gtt-project.org/ns/fiware",
+      "rdfs:label": "GTT FIWARE core vocabulary",
+      "rdfs:comment": "The frozen core vocabulary emitted by the redmine_gtt_fiware plugin: an Issue entity per Redmine issue, with a minimal cross-instance property set. Instances extend it with their own subtypes and custom-field terms, published in each instance's own context document.",
+      "rdfs:seeAlso": { "@id": "https://github.com/gtt-project/redmine_gtt_fiware" }
+    },
+    {
+      "@id": "gttfiware:Issue",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Issue",
+      "rdfs:comment": "A tracked unit of work in a Redmine instance, published as shared context. Instance-defined subtypes (for example WorkOrder or Incident) are declared rdfs:subClassOf this class in the instance's context document.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:title",
+      "@type": "rdf:Property",
+      "rdfs:label": "title",
+      "rdfs:comment": "The issue subject.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:status",
+      "@type": "rdf:Property",
+      "rdfs:label": "status",
+      "rdfs:comment": "Normalized lifecycle state: open or closed. The instance's own status name travels in statusLabel.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:statusLabel",
+      "@type": "rdf:Property",
+      "rdfs:label": "statusLabel",
+      "rdfs:comment": "The instance's own status name, unnormalized.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:subtype",
+      "@type": "rdf:Property",
+      "rdfs:label": "subtype",
+      "rdfs:comment": "The instance-defined subtype term for the issue's tracker. The term is declared as a class (rdfs:subClassOf gttfiware:Issue) in the instance's context document; it travels as a property because common brokers reject multi-type entities.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:source",
+      "@type": "rdf:Property",
+      "rdfs:label": "source",
+      "rdfs:comment": "The canonical URL of the issue in its system of record.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:refersTo",
+      "@type": "rdf:Property",
+      "rdfs:label": "refersTo",
+      "rdfs:comment": "Relationship to the entity that triggered the issue, when it originated from a broker notification. The link that lets consumers correlate a problem with the work addressing it.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:description",
+      "@type": "rdf:Property",
+      "rdfs:label": "description",
+      "rdfs:comment": "The issue description. Exposed per tracker by the emitting instance's administrator.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:priority",
+      "@type": "rdf:Property",
+      "rdfs:label": "priority",
+      "rdfs:comment": "The issue priority name. Exposed per tracker.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:category",
+      "@type": "rdf:Property",
+      "rdfs:label": "category",
+      "rdfs:comment": "The issue category name. Exposed per tracker.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:targetVersion",
+      "@type": "rdf:Property",
+      "rdfs:label": "targetVersion",
+      "rdfs:comment": "The issue's target version or milestone name. Exposed per tracker.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:startDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "startDate",
+      "rdfs:comment": "The planned start date. Exposed per tracker.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:dueDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "dueDate",
+      "rdfs:comment": "The due date. Exposed per tracker.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:estimatedTime",
+      "@type": "rdf:Property",
+      "rdfs:label": "estimatedTime",
+      "rdfs:comment": "Estimated effort in hours. Exposed per tracker.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:percentDone",
+      "@type": "rdf:Property",
+      "rdfs:label": "percentDone",
+      "rdfs:comment": "Completion in percent, 0 to 100. Exposed per tracker.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:parent",
+      "@type": "rdf:Property",
+      "rdfs:label": "parent",
+      "rdfs:comment": "Relationship to the parent issue's entity. Exposed per tracker.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    },
+    {
+      "@id": "gttfiware:assignee",
+      "@type": "rdf:Property",
+      "rdfs:label": "assignee",
+      "rdfs:comment": "The display name of the person or group the issue is assigned to. Exposed per tracker; publishing it to a shared broker is an explicit administrator decision.",
+      "rdfs:isDefinedBy": { "@id": "https://gtt-project.org/ns/fiware" }
+    }
+  ]
+}
