@@ -343,6 +343,10 @@ a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
 
 .showcase { display: flex; flex-direction: column; gap: 64px; }
 
+/* A card grid directly after a showcase (FIWARE section) keeps the
+   showcase's 64px rhythm instead of butting against the last screenshot. */
+.showcase + .grid { margin-top: 64px; }
+
 .showcase-row {
   display: grid;
   grid-template-columns: minmax(260px, 2fr) 3fr;
