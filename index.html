@@ -193,10 +193,12 @@
     <div class="container">
       <h2>From city sensors to work orders</h2>
       <p class="section-lead">The <a href="https://github.com/gtt-project/redmine_gtt_fiware">redmine_gtt_fiware</a>
-      plugin connects GTT to <a href="https://www.fiware.org/">FIWARE</a> context brokers.
-      When an entity changes (a waste container fills up, a sensor crosses a threshold,
-      a citizen files a report), a geo-referenced Redmine issue appears exactly where
-      the work is.</p>
+      plugin connects GTT to <a href="https://www.fiware.org/">FIWARE</a> context brokers,
+      in both directions. When an entity changes (a waste container fills up, a sensor
+      crosses a threshold, a citizen files a report), a geo-referenced Redmine issue
+      appears exactly where the work is. And the issues themselves can be published
+      back to the broker, so other systems and organizations see what is being worked
+      on.</p>
       <div class="showcase">
         <div class="showcase-row">
           <div class="showcase-text">
@@ -226,6 +228,22 @@
                  alt="Subscription form with a live preview of the issue rendered from a sample waste container entity">
           </figure>
         </div>
+        <div class="showcase-row">
+          <div class="showcase-text">
+            <h3>See who else is on it</h3>
+            <p>Two organizations share a broker, and both track the same overflowing
+            container. Each issue shows the other organization's work order with its
+            status and a link, new issues can be annotated or suppressed while someone
+            else is already on the problem, and foreign status changes arrive as issue
+            notes. Matching uses a small
+            <a href="/ns/fiware">published vocabulary</a>, not a shared database.</p>
+          </div>
+          <figure class="browser-frame">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img src="assets/img/fiware-federation.jpg" width="1600" height="521" loading="lazy"
+                 alt="Redmine issue whose federation panel lists another organization's work order for the same waste container, with status and a link">
+          </figure>
+        </div>
       </div>
       <div class="grid features">
         <article class="card">
@@ -240,9 +258,11 @@
           <code>X-Api-Key</code>, <code>X-Auth-Token</code>.</p>
         </article>
         <article class="card">
-          <h3>Built for production</h3>
-          <p>Per-subscription webhook secrets, SSRF-hardened attachment downloads,
-          and a CI matrix across Redmine 6.0 to 7.0 and Ruby 3.3 to 4.0.</p>
+          <h3>Issues become entities</h3>
+          <p>Every issue can live on the broker as an NGSI-LD <code>Issue</code>
+          entity with a stable id, kept up to date from creation to closure, so
+          dashboards and other cities' systems see the state of the work without
+          touching Redmine.</p>
         </article>
       </div>
       <p class="center">
