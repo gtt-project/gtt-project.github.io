@@ -37,6 +37,7 @@
       <a href="#features">Features</a>
       <a href="#screenshots">Screenshots</a>
       <a href="#ecosystem">Plugins</a>
+      <a href="#fiware">FIWARE</a>
       <a href="#get-started">Get started</a>
       <a href="https://github.com/orgs/gtt-project/discussions">Community</a>
     </div>
@@ -165,7 +166,7 @@
         </a>
         <a class="card repo" href="https://github.com/gtt-project/redmine_gtt_fiware">
           <h3>redmine_gtt_fiware</h3>
-          <p>Connect Redmine to FIWARE: use GTT as an NGSI context provider and consumer.</p>
+          <p>Turn FIWARE context broker notifications (NGSIv2 and NGSI-LD) into geo-referenced issues.</p>
         </a>
         <a class="card repo" href="https://github.com/gtt-project/redmine_good_job">
           <h3>redmine_good_job</h3>
@@ -188,7 +189,70 @@
     </div>
   </section>
 
-  <section id="get-started" class="section alt">
+  <section id="fiware" class="section alt">
+    <div class="container">
+      <h2>From city sensors to work orders</h2>
+      <p class="section-lead">The <a href="https://github.com/gtt-project/redmine_gtt_fiware">redmine_gtt_fiware</a>
+      plugin connects GTT to <a href="https://www.fiware.org/">FIWARE</a> context brokers.
+      When an entity changes (a waste container fills up, a sensor crosses a threshold,
+      a citizen files a report), a geo-referenced Redmine issue appears exactly where
+      the work is.</p>
+      <div class="showcase">
+        <div class="showcase-row">
+          <div class="showcase-text">
+            <h3>An issue appears where the work is</h3>
+            <p>The broker notifies Redmine, and the plugin does the rest: it renders
+            your templates into subject, description and map geometry, groups repeated
+            notifications for the same entity into one issue instead of flooding the
+            tracker, and authenticates every callback with a per-subscription secret.</p>
+          </div>
+          <figure class="browser-frame">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img src="assets/img/fiware-issue.jpg" width="1600" height="966" loading="lazy"
+                 alt="Redmine issue created from a FIWARE notification, with a map pin at the waste container's location in a park">
+          </figure>
+        </div>
+        <div class="showcase-row reverse">
+          <div class="showcase-text">
+            <h3>Subscriptions without writing JSON</h3>
+            <p>Pick a broker connection, say what to watch, and describe the issue with
+            <code>${...}</code> placeholders. The live preview renders your template
+            against a real entity fetched from the broker, before anything is
+            published.</p>
+          </div>
+          <figure class="browser-frame">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img src="assets/img/fiware-template.jpg" width="1600" height="833" loading="lazy"
+                 alt="Subscription form with a live preview of the issue rendered from a sample waste container entity">
+          </figure>
+        </div>
+      </div>
+      <div class="grid features">
+        <article class="card">
+          <h3>Both NGSI standards</h3>
+          <p>Speaks NGSIv2 and NGSI-LD, with the form adapting to whichever the
+          selected broker uses. Verified live against Orion and GeonicDB.</p>
+        </article>
+        <article class="card">
+          <h3>Fits your broker's security</h3>
+          <p>Tokens stored encrypted, relayed per request, or sent browser-direct,
+          in any header your gateway expects: <code>Authorization: Bearer</code>,
+          <code>X-Api-Key</code>, <code>X-Auth-Token</code>.</p>
+        </article>
+        <article class="card">
+          <h3>Built for production</h3>
+          <p>Per-subscription webhook secrets, SSRF-hardened attachment downloads,
+          and a CI matrix across Redmine 6.0 to 7.0 and Ruby 3.3 to 4.0.</p>
+        </article>
+      </div>
+      <p class="center">
+        <a class="btn btn-primary" href="https://github.com/gtt-project/redmine_gtt_fiware">redmine_gtt_fiware on GitHub</a>
+        <a class="btn btn-ghost" href="https://github.com/gtt-project/redmine_gtt_fiware/blob/main/doc/index.md">Documentation</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="get-started" class="section">
     <div class="container">
       <h2>Get started</h2>
       <p class="section-lead">GTT requires Redmine with PostgreSQL/PostGIS. Each release ships a prebuilt archive, so no Node toolchain is needed on the server.</p>
