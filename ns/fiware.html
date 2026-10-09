@@ -92,6 +92,24 @@
 
   <p class="muted">Everything beyond the core defaults to unexposed. Journals,
   watchers and private issues are never emitted.</p>
+
+  <h2 id="task-profile">Task profile <span class="muted">(datamodels.jp)</span></h2>
+  <p>An instance can also emit its issues as <code>Task</code> entities of the
+  neutral <a href="https://datamodels.jp/en/models/task/">datamodels.jp task
+  vocabulary</a>, so consumers written against that vocabulary read them
+  without a GTT-specific context. The frozen core above does not change; the
+  instance administrator chooses one of the two.</p>
+  <p>Machine-readable: <a href="/ns/fiware-task.jsonld">fiware-task.jsonld</a>.
+  It imports the datamodels.jp task context and adds only what <code>Task</code>
+  lacks:</p>
+  <table>
+    <tr><th>Term</th><th>Kind</th><th>Meaning</th></tr>
+    <tr><td>category</td><td>Property</td><td>The issue category name
+      (<code>gttfiware:category</code>, as in the core).</td></tr>
+  </table>
+  <p class="muted">Each instance publishes its own task-mode context at
+  <code>&lt;instance&gt;/fiware/task-context.jsonld</code>: subtypes, declared
+  <code>rdfs:subClassOf</code> <code>Task</code>, and custom-field terms.</p>
 </main>
 </body>
 </html>
