@@ -1,0 +1,9 @@
+{
+  "@context": [
+    "https://datamodels.jp/context/task/v1.jsonld",
+    {
+      "gttfiware": "https://gtt-project.org/ns/fiware#",
+      "category": "gttfiware:category"
+    }
+  ]
+}
