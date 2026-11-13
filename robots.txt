@@ -1,0 +1,7 @@
+# gtt-project.org. This file applies to the whole domain, including the
+# GitHub Pages of other gtt-project repositories (gtt-project.org/<repo>/):
+# a Disallow here would hide those pages too.
+User-agent: *
+Allow: /
+
+Sitemap: https://gtt-project.org/sitemap.xml

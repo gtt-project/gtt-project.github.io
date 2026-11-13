@@ -8,6 +8,8 @@ The GTT Project website, served by GitHub Pages from the `gh-pages` branch at
 - `index.html` - the landing page (plain static HTML, no build step)
 - `assets/css/style.css` - styles (light and dark scheme via CSS variables)
 - `assets/img/` - logo and screenshots
+- `ns/fiware.html` - retired vocabulary page, kept so old links resolve (`noindex`)
+- `robots.txt`, `sitemap.xml` - for search engines; add a new page to `sitemap.xml`. `robots.txt` applies to the whole domain, including other repositories' Pages under gtt-project.org
 - `CNAME` - custom domain configuration
 - `.nojekyll` - disables Jekyll processing; files are served as-is
 
