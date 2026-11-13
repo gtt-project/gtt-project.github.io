@@ -1,4 +1,6 @@
-# gtt-project.org. Cloudflare adds its content signals in front of this file.
+# gtt-project.org. This file applies to the whole domain, including the
+# GitHub Pages of other gtt-project repositories (gtt-project.org/<repo>/):
+# a Disallow here would hide those pages too.
 User-agent: *
 Allow: /
 
