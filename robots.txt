@@ -1,0 +1,5 @@
+# gtt-project.org. Cloudflare adds its content signals in front of this file.
+User-agent: *
+Allow: /
+
+Sitemap: https://gtt-project.org/sitemap.xml
